@@ -69,7 +69,6 @@ class HomePage extends GetView<HomeController> {
                   child: ElevatedButton(
                     onPressed: () {
                       final vlr = double.tryParse(controller.txtCelscius.value.text);
-                      print(vlr);
                       controller.converter(vlr);
                     },
                     child: Text('Converter Temperatura'),
@@ -86,7 +85,9 @@ class HomePage extends GetView<HomeController> {
                   width: double.infinity,
                   height: 60,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      controller.limpar();
+                    },
                     child: Text('Limpar'),
                     style: ElevatedButton.styleFrom(
                       primary: Colors.red,

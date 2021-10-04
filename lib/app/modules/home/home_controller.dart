@@ -7,6 +7,7 @@ class HomeController extends GetxController {
 
   void limpar() {
     txtFahrenheit.value.clear();
+    txtCelscius.value.clear();
   }
 
   void converter(vlrCelscius) {
